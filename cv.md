@@ -1,11 +1,11 @@
-#Sergey Zayarnyy CV
+# Sergey Zayarnyy CV
 
-##Contacts 
+## Contacts 
 
 * Discord(https://discordapp.com/users/icesvz)
 * Github(https://github.com/icesvz)
 
-##Experience and Education
+## Experience and Education
 
 * 2018 — ... Freelancer, individual entrepreneur in my own boutique agency
 * 1999 — 2018 Works full-time for multiple companies as webmaster, full stack web developer, team-lead, etc
