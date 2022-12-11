@@ -14,8 +14,13 @@
 
 ## Languages
 
+* English: B1/B2
+* French: A0/A1
+
 ## Achievements and Sertifications
 
-
+* Google Digital Garage sertificate «The Fundamentals of Digital Marketing»
+* Flutter sertificate «Flutter Clock Challenge»
+* Github badge «Arctic Code Vault Contributor» 
 
 
