@@ -1,9 +1,9 @@
 # Sergey Zayarnyy CV
 
-## Contacts 
+## Contacts
 
-* Discord(https://discordapp.com/users/icesvz)
-* Github(https://github.com/icesvz)
+* [Discord](https://discordapp.com/users/icesvz)
+* [Github](https://github.com/icesvz)
 
 ## Experience and Education
 
@@ -22,5 +22,4 @@
 * Google Digital Garage sertificate «The Fundamentals of Digital Marketing»
 * Flutter sertificate «Flutter Clock Challenge»
 * Github badge «Arctic Code Vault Contributor» 
-
 
