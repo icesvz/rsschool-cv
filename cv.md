@@ -2,8 +2,8 @@
 
 ##Contacts 
 
-* Discord
-* Github
+* Discord(https://discordapp.com/users/icesvz)
+* Github(https://github.com/icesvz)
 
 ##Experience and Education
 
