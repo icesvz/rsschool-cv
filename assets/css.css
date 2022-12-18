@@ -1,0 +1,333 @@
+/* 
+readme: 
+idea taken from "vintage" i386 bootstrap theme https://kristopolous.github.io/BOOTSTRA.386/ 
+all code written by hands, nothing used 
+ugly colors are basic 16 colors https://www.w3.org/TR/2018/SPSD-html32-20180315/#body  
+*/
+@import "crt-insane.css";
+
+:root {
+    --crt_degrade: 0px;    
+    --crt_white: #FFF;
+    --crt_yellow: #FFFF00;
+    --crt_silver: #C0C0C0;
+    --crt_gray: #808080;
+    --crt_aqua: #00FFFF;
+    --crt_navy: #000080;
+    --crt_blue: #0000FF;
+    --crt_black: #000;
+    --crt_red: #FF0000;
+    --crt_html: #030308;
+    --crt_scaley: 1;
+    --crt_bright: '100%';  
+    --crt_hrotat: '0deg';  
+  }
+
+/*
+Prevent printing unecessery content
+*/
+@media print {
+header, footer{
+    display:none;
+    }
+#code_holder {
+    white-space: pre;
+}
+
+}
+
+/*
+Retro font from 
+https://int10h.org/oldschool-pc-fonts/fontlist/font?ibm_cgathin-2y#-
+*/
+@font-face {
+    font-family: 'Web IBM CGAthin-2y';
+    font-style: normal;
+    font-weight: 400;
+    src: url(web_ibm_cgathin-2y.woff) format('woff');
+}
+
+
+
+@media screen {
+
+html {
+    background-color: var(--crt_html);
+    }
+
+body{
+    background-color: var(--crt_navy);
+    font-family: 'Web IBM CGAthin-2y', monospace;
+    font-size: 18px;
+    margin: 0;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0;  
+    transform: scale(1, var(--crt_scaley));
+    /* conflict?? cant set brightness + hue-rotate  */
+   /* filter: brightness(var(--crt_bright)); */
+    filter: hue-rotate(var(--crt_hrotat)); 
+    }
+
+nav {
+    background-color: var(--crt_gray);
+    padding-left: 20px;
+    }
+
+header{
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+
+
+}
+
+nav {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+    }
+.header {
+    width: 32%;
+    }
+.footer {
+    background-color: var(--crt_silver);
+}
+ul.header li{display: inline;}
+ul.footer li{display: inline;}
+
+.header span {
+    white-space:nowrap;
+    cursor: pointer;
+    }
+
+
+
+header, main, footer { 
+    filter: blur( var(--crt_degrade) );   
+    }    
+
+ul{
+    margin-block-start: 0em;
+    margin-block-end: 0em;    
+}
+
+main {    
+    padding-left: 20px;
+    }
+
+body, p, a {
+    color: var(--crt_white);
+    }
+
+#welcome   a {
+    color: var(--crt_blue);
+    }
+
+
+h1, h2 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.3em;
+    margin-block-end: 0em;    
+   /* font-family: 'Web IBM CGAthin-2y'; */
+    text-transform: uppercase;
+    }
+h4 {
+    display: inline;
+    font-weight: normal;
+    padding-top: 20px;    
+    margin-block-end: 0em;    
+    /* font-family: 'Web IBM CGAthin-2y'; */
+    }
+
+h2:target, h4:target {
+    color: #00FF00; 
+    }
+
+    
+#welcome{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+
+    border: 2px solid var(--crt_navy);
+    outline: 2px solid var(--crt_silver);    
+    background-color: var(--crt_silver);    
+    color: #000;    
+    margin: 1em;
+    padding: 1em;
+    }    
+
+    #welcome div:first-child{
+        display: block;
+        width: 80%;
+        }
+    #welcome div:first-child p{
+        color: #000;    
+        }
+
+    #welcome div:last-child{
+        width: 20%;
+        }
+    #welcome div:last-child img{
+        margin-left: 2em;
+        }
+        
+
+#achivements-list, #languages-list{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    }
+
+#achivements-list p, #languages-list p{
+    display: block;
+    background-color: var(--crt_silver);
+    padding: 6px;
+    margin: 6px;
+    border: 2px solid var(--crt_navy);
+    outline: 2px solid var(--crt_silver);
+    width: 31%;
+    color: #000;
+    }
+
+#experience-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+.experience-one {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    }
+
+.experience-one div:first{
+    width: 17%;
+    }
+
+.experience-one div:last-child{
+    width:83%;
+    /*padding-left: 20px;*/
+    }
+            
+.likestrong {
+    font-weight: bold;
+    }
+
+/* todo, garbage for now  */
+/* todo, stylize scroll  */
+#code_holder {
+    background-color: var(--crt_aqua);
+  /*  font-family: 'Web IBM CGAthin-2y', monospace;  */
+    padding: 6px;
+    margin: 6px;
+    color: #000;    
+    /*font-size: small;*/
+    /*_text-align: justify;*/
+    overflow-y: scroll;
+    max-height: 10em;
+    border: 2px solid var(--crt_navy);
+    outline: 2px solid var(--crt_aqua);    
+    }
+#code_holder b{
+    background-color: var(--crt_yellow);
+    }
+h2 small {
+    font-size: small;
+    }
+#summary li {display:inline;}
+footer div:first-child{
+    /*
+    todo: 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers
+    margin-top: 120px;
+    */
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    background-color: var(--crt_gray);
+    color: var(--crt_black);
+}
+
+footer div:last-child{
+    text-align: center;
+    }
+
+nav a, nav span, .header span span
+.footer a, .footer a span
+{
+    color: var(--crt_black);
+    text-decoration: none;
+    display: inline-block;  /* for ::first-letter */
+}
+nav a span::first-letter, .header span span::first-letter, 
+.footer a span::first-letter
+{
+    color: var(--crt_red) !important;
+    text-transform: uppercase;
+}
+/*
+nav a:active, nav a:hover{
+    text-decoration: underline; 
+    color: #00FF00;
+    }
+*/
+
+/*
+#crt_degrade_holder {
+    color: 	var(--crt_navy);
+    background-color: var(--crt_silver);
+    width: 86px;
+    height: 29px;
+    margin-left: 10px;
+    border: 1px solid #808080;
+    cursor: pointer;
+    }
+    
+    #crt_degrade_notifier{
+        width: 60px;
+        height: 16px;
+        font-size: 14px;
+        margin-left: 5px;
+        overflow: hidden;
+        }
+    #crt_degrade_stopme{
+        width: 88px;
+        height: 16px;
+        font-size: 10px;
+        margin-left: 5px;
+        overflow: hidden;
+        }
+*/
+
+
+.comment {
+    color: var(--crt_gray);
+    }
+
+
+#rslogo-holder {
+    background-color: var(--crt_yellow); 
+    width: 88px; 
+    height: 31px; 
+    display: inline;
+}
+
+#rslogo-holder img {
+    margin: 10px; 
+}
+
+.footer p, .footer li, .footer li a{
+    color: var(--crt_black);
+    }
+}
